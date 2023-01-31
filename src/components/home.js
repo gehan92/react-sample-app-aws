@@ -11,7 +11,7 @@ function Home() {
   const AddDataSet = async () => {
     let data = { name, age, address };
     console.log("add data:: ", data);
-    Axios.post("http://localhost:3000/myApp/add", data)
+    Axios.post("http://100.26.214.212/myApp/add", data)
       .then((res) => {
         console.log("add data-> ", res.data);
       })
@@ -21,7 +21,7 @@ function Home() {
   };
 
   useEffect(() => {
-    Axios.get("http://localhost:3000/myApp/get")
+    Axios.get("http://100.26.214.212/myApp/get")
       .then((res) => {
         setUserData(res.data.Data);
         console.log("data set ::", res.data.Data);
